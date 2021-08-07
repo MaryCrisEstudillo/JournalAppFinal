@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+
+<p style="margin:5vw 0vw 0vw 45vw;" >
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p style="margin:2vw 0vw 0vw 45vw;">
+  <strong>Body:</strong>
+  <%= @task.body %>
+</p>
+
+<div style="margin:2vw 0vw 0vw 45vw;"><%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_task_path %>
+<%= link_to 'Delete', task_path(@task),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+</div>
